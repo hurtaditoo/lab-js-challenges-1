@@ -22,14 +22,20 @@ function howManyTimes(arrayOfWords, wordToSearch) {
     }
   }
   return numberOfAppeareances;
-}
+};
 
 
 
 
 // Iteration 2 | Number Sequence
-function createSequence(n) {
-
+function createSequence(number) {
+  const numbers = [];
+  if (number > 0) {
+    for (let i = 0; i <= number; i++) {
+      numbers.push(i);
+    }
+  }
+  return numbers;
 }
 
 
