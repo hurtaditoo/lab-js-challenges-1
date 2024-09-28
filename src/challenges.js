@@ -44,7 +44,17 @@ function createSequence(number) {
 // Iteration 3 | Multiply for Each
 const numbers = [1, 2, 5, 10, 13, 50];
 
-function multiplyBy() {}
+function multiplyByFor(arrayOfNumbers, multiplier) {
+  const allNumbersMultiplied = [];
+  // for (let i = 0; i < arrayOfNumbers.length; i++) {
+  //   const currentNumber = arrayOfNumbers[i];
+  //   allNumbersMultiplied.push(currentNumber * multiplier);
+  // }
+  arrayOfNumbers.forEach(currentNumber => {
+    allNumbersMultiplied.push(currentNumber * multiplier);
+  });
+  return allNumbersMultiplied;
+}
 
 
 
