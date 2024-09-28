@@ -44,7 +44,7 @@ function createSequence(number) {
 // Iteration 3 | Multiply for Each
 const numbers = [1, 2, 5, 10, 13, 50];
 
-function multiplyByFor(arrayOfNumbers, multiplier) {
+function multiplyBy(arrayOfNumbers, multiplier) {
   const allNumbersMultiplied = [];
   // for (let i = 0; i < arrayOfNumbers.length; i++) {
   //   const currentNumber = arrayOfNumbers[i];
@@ -63,7 +63,30 @@ function multiplyByFor(arrayOfNumbers, multiplier) {
 const original = ["cat", "dog", "fish", "bird", "cat", "fish"];
 const toRemove = ["cat", "dog"];
 
-function filterOut() {}
+function filterOut(originalArray, arrayToRemove) {
+  const arrayFiltered = [];
+  if (originalArray.length === 0) {
+    return null;
+  }
+
+  for (let i = 0; i < originalArray.length; i++) {
+    const currentWord = originalArray[i];
+    let shouldRemove = false;
+
+    for (let j = 0; j < arrayToRemove.length; i++) {
+      const wordToRemove = arrayToRemove[i];
+      if (currentWord === wordToRemove) {
+        shouldRemove = true;
+        break;
+      }
+    }
+
+    if (!shouldRemove) {
+      arrayFiltered.push(currentWord);
+    }
+  }
+  return arrayFiltered;
+}
 
 
 
