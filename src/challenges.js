@@ -74,7 +74,7 @@ function filterOut(originalArray, arrayToRemove) {
     let shouldRemove = false;
 
     for (let j = 0; j < arrayToRemove.length; i++) {
-      const wordToRemove = arrayToRemove[i];
+      const wordToRemove = arrayToRemove[j];
       if (currentWord === wordToRemove) {
         shouldRemove = true;
         break;
