@@ -106,7 +106,20 @@ const duplicateWords = [
   "bring"
 ];
 
-function uniquifyArray() {}
+function uniquifyArray(originalArray) {
+  const uniquifyWords = [];
+  if (originalArray.length === 0) {
+    return null;
+  }
+  
+  for (let i = 0; i < originalArray.length; i++) {
+    const currentWord = originalArray[i];
+    if (uniquifyWords.indexOf(currentWord) === -1) {
+      uniquifyWords.push(currentWord);
+    }
+  }
+  return uniquifyWords;
+}
 
 
 
